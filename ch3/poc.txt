@@ -1,0 +1,25 @@
+1. 
+:root {
+      --base: #ffc600;
+      --spacing: 10px;
+      --blur: 10px;
+    }
+ this is how we declare and initialize css variables
+ and to use these variables in our other elements we do this 
+
+     img {
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
+
+2.
+ const suffix = this.dataset.sizing || '';  
+ here  this.dataset will return an object with 
+ all the attributes with data- attached with them
+
+in this case it will return sizing Property whose value will be px for spacing and blur and none for the color
+
+3.
+document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+This is how we setProperty of variables in css
